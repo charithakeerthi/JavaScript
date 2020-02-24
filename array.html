@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p>The typeof operator, when used on an array, returns object:</p>
+<p id="demo"></p>
+<script>
+var fruits = [
+{fruit1 : "Banana"}, 
+{fruit2 : "Orange"}, 
+{fruit3 : "Apple"}, 
+{fruit4 : "Mango"},
+{fruit : function() {return this.fruits[0].fruit1 + this.fruit2;}} 
+];
+document.getElementById("demo").innerHTML = fruits[0].fruit1;
+
+</script>
+
+</body>
+</html>

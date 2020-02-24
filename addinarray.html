@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+
+var fruits, flen, text=[], i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+flen = fruits.length;
+
+for (i=0; i < flen; i++){
+	text.push(fruits[i]);
+}
+
+function myFunction() {
+	if (!fruits.includes("lemon")){      
+
+      fruits.push("lemon");
+      // console.log("----------", fruits)
+  	}
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+</script>
+
+</body>
+</html>
