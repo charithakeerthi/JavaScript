@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>  
+<html>        
+    <head>         
+      <script> 
+        var el_up = document.getElementById("GFG_UP"); 
+        var el_down = document.getElementById("GFG_DOWN"); 
+        var str = 'You can check the constructor property to find out if an object is an Array (contains the word "Array"):'; 
+        document.write(str); 
+        string = str.replace(/[^\w\s]/gi, '');
+        newStr = string.replace(' ', '-')
+        var newStr = ""; 
+        for(var i=0; i<string.length; i++) {  
+           if (string[i] == ' ') { 
+               newStr += '-'; 
+           } 
+	       else { 
+    	       newStr += string[i]; 
+            } 
+        } 
+        document.write("<br><br>"+newStr);
+      </script>  
+    </head>
+</html>

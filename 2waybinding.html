@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		twoWay=function(event){
+			var elem =document.getElementsByClassName(event.currentTarget.className);
+			for(var key in elem){
+    			elem[key].value=event.currentTarget.value;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>Two way binding</h2>
+	Name : 	<input type="text" class="username" onkeyup="twoWay(event)" >
+			<input type="text" class="username" onkeyup="twoWay(event)"> <br>
+	</body>
+</html>
