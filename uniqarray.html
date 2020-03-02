@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <script>
+            function onlyUnique(value, index, self) { 
+    			return self.indexOf(value) === index;
+			}
+            var a = [1, 2, 1, 4, 1, 3];
+			var unique = a.filter( onlyUnique ); // returns [1, 2, 4, 3]
+            document.write(unique)
+        </script>
+    </body>
+  </html>

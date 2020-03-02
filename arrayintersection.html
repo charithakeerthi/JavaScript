@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <script>
+            var array1 = [1, 2, 3, 10];
+            var array2 = [101, 2, 1, 10];
+            var array3 = [2, 1, 10];
+            //var array4 = [1, 2];
+
+            function intersection() {
+                var result = [];
+            var lists;
+            
+            if(arguments.length === 1) {
+                lists = arguments[0];
+            } else {
+                lists = arguments;
+            }
+  
+            for(var i = 0; i < lists.length; i++) {
+                var currentList = lists[i];
+                for(var y = 0; y < currentList.length; y++) {
+                    var currentValue = currentList[y];
+                if(result.indexOf(currentValue) === -1) {
+                    var existsInAll = true;
+                    for(var x = 0; x < lists.length; x++) {
+                    if(lists[x].indexOf(currentValue) === -1) {
+                        existsInAll = false;
+                        break;
+                    }
+                    }
+                    if(existsInAll) {
+                    result.push(currentValue);
+                    }
+                }
+                }
+            }
+            return result;
+            }
+
+            document.write(JSON.stringify(intersection([array1, array2, array3])));
+        </script>
+    </body>
+</html>
+
+
+
+<html>
+    <body>
+        <script>
+            let arr1 = [1, 2, 3];
+            let arr2 = [101, 2, 1, 10];
+            //let arr3 = [2, 1];
+            let intersection = arr1.filter(x => arr2.includes(x));
+            //console.log(intersection);
+            document.write(intersection);
+        </script>
+    </body>
+  </html>

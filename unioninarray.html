@@ -1,0 +1,90 @@
+<html>
+    <body>
+        <script>
+            function union(arra1, arra2, arra3) {  
+                if ((arra1 == null) || (arra2==null) || (arra3==null)) 
+                return void 0;
+                
+                var obj = {};
+            
+                for (var i = arra1.length-1; i >= 0; -- i)
+                obj[arra1[i]] = arra1[i];
+            
+                for (var i = arra2.length-1; i >= 0; -- i)
+                obj[arra2[i]] = arra2[i];
+            
+                for (var i = arra3.length-1; i >= 0; -- i)
+                obj[arra3[i]] = arra3[i];
+                
+                var res = [];
+            
+                for (var n in obj)
+                {  
+                    res.push(obj[n]);
+                }
+            
+                return res;
+            }
+            document.write(union([1, 2, 3], [101, 2, 1, 10], [2, 1]));
+            console.log(union([1, 2, 3], [101, 2, 1, 10], [2, 1]));
+        </script>
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function union(arra1, arra2) {
+  
+  if ((arra1 == null) || (arra2==null)) 
+    return void 0;
+  
+  var obj = {};
+ 
+  for (var i = arra1.length-1; i >= 0; -- i)
+     obj[arra1[i]] = arra1[i];
+ 
+  for (var i = arra2.length-1; i >= 0; -- i)
+     obj[arra2[i]] = arra2[i];
+ 
+  var res = [];
+ 
+  for (var n in obj)
+  {
+  
+    if (obj.hasOwnProperty(n)) 
+      res.push(obj[n]);
+  }
+ 
+  return res;
+}
+console.log(union([1, 2, 3], [100, 2, 1, 10]));
+
+document.write(union([1, 2, 3], [100, 2, 1, 10]));
+
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <script src =  
+"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" > 
+        </script> 
+    </head> 
+    <body> 
+        <script type="text/javascript"> 
+            document.write(_.union([1, 2, 3], [101, 2, 1, 10], [2, 1])); 
+        </script> 
+    </body> 
+</html>    
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+const nums = [1, 2, 1, 0, 3, 1, 4];
+const remove = [0, 1];
+
+function removeFromArray(original, remove) {
+  return original.filter(value => !remove.includes(value));
+}
+
+document.write(removeFromArray(nums, remove));
+console.log(removeFromArray(nums, remove)); // [2, 3, 4]
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flatten a nested array</title>
+</head>
+<body>
+
+<script>
+	var flatten = function(a, shallow,r){
+  if(!r){ r = []}
+   
+if (shallow) {
+  return r.concat.apply(r,a);
+  }
+      
+   for(var i=0; i<a.length; i++){
+        if(a[i].constructor == Array){
+            flatten(a[i],shallow,r);
+        }else{
+            r.push(a[i]);
+        }
+    }
+    return r;
+}
+
+console.log(flatten([1, [2], [3, [[4]]],[5,6]]))
+console.log(flatten([1, [2], [3, [[4]]],[5,6]], true))
+
+document.write(flatten([1, [2], [3, [[4]]],[5,6]]) + "<br>");
+document.write("<br>" + flatten([1, [2], [3, [[4]]],[5,6]], true));
+</script>
+
+</body>
+</html>
+
+
+
+<html>
+<body>
+
+<script>
+function flatten(arr, shw, flnd = []) {
+  if (shw) return arr.reduce((a, b) => a.concat(b), []);
+  
+    arr.forEach(el => {
+        Array.isArray(el) ? flatten(el, shw, flnd) : flnd.push(el);
+    });
+    return flnd;
+}
+const arr = [1, [2], [3, [[4, [10, [12]]], 11]],[5,6]];
+console.log(flatten(arr)); /* [1, 2, 3, 4, 10, 12, 11, 5, 6] */
+console.log(flatten(arr, true)); /* [1, 2, 3, [[4, [10, [12]]], 11], 5, 6] */
+document.write(flatten(arr) + "<br>"); /* [1, 2, 3, 4, 10, 12, 11, 5, 6] */
+document.write("<br>" + flatten(arr, true)); /* [1, 2, 3, [[4, [10, [12]]], 11], 5, 6] */
+</script>
+
+</body>
+</html>
