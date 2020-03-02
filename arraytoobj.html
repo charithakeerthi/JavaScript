@@ -1,0 +1,32 @@
+<html>
+<script>
+    array =    [['moe', 30], ['larry', 40], ['curly', 50]];
+    
+    var obj = {};
+    array.forEach(function(data){
+        obj[data[0]] = data[1]
+    });
+    console.log(obj);
+</script>
+<html>
+
+
+    <html>
+        <body>
+            <script>
+                  var a1 = ['moe', 'larry', 'curly'],
+                    a2 = [30, 40, 50],
+                    a3 = [true, false, false],
+                    a4 = [];
+                for (var i=0; i<a1.length;i++){
+                    a4.push([a1[i], a2[i], a3[i]]);
+                }
+                var obj = {};
+                a4.forEach(function(data){
+                    obj[data[0]] = data[1]
+                });
+                console.log(obj);
+                document.write(JSON.stringify(obj));
+            </script>
+        </body>
+    </html>

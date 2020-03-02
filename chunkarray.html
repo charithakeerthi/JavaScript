@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<script>
+			const chunk = (arr, size) =>
+  			Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+    			arr.slice(i * size, i * size + size)
+  			);
+			console.log(chunk(["Tyrone", "Elie", "Aidan", "Sam", "Katrina", "Billie", "Little Timmy"], 2));
+            
+        </script>
+	</body>
+</html>
