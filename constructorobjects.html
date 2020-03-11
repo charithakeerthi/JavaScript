@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <body>
@@ -34,3 +35,41 @@ document.write("The nationality of my mother is " + myMother.nationality)
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object Constructors</h2>
+
+<p>You cannot add a new property to a constructor function.</p>
+
+<p id="demo"></p>
+
+<script>
+
+// Constructor function for Person objects
+function Person(first, last, age, eye, nation) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = nation;
+}
+
+// You can NOT add a new property to a constructor function
+//Person.nationality = "English";   // The nationality of my father is "undefined"
+
+// Create 2 Person objects
+var myFather = new Person("John", "Doe", 50, "blue", "English");
+var myMother = new Person("Sally", "Rally", 48, "green", "Spanish");
+
+// Display nationality
+document.getElementById("demo").innerHTML =
+"The nationality of my father is " + myFather.nationality; 
+document.write("The nationality of my mother is " + myMother.nationality)
+</script>
+
+</body>
+</html>
+>>>>>>> 1961decbe81fb1c45847d06669e8313b2a87f460
